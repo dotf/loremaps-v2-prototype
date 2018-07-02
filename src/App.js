@@ -3,6 +3,7 @@ import faerunImage from './images/Maps/faerunlarge700x400.jpg';
 import gotImage from './images/Maps/GoT_speculative_map700x400.jpg';
 import loreMapsLogo from './images/LoreMaps_Logo.png';
 import Navbar from './Navbar';
+import Footer from './Footer';
 import './App.css';
 
 class App extends Component {
@@ -75,9 +76,7 @@ class App extends Component {
 
                     </div>
                     <hr/>
-                    <footer>
-                        <p>&copy; 2016 - LoreMaps</p>
-                    </footer>
+                    <Footer/>
                 </div>
             </div>
 
