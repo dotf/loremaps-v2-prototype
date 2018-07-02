@@ -8,20 +8,20 @@ import Map from './Map';
 class App extends Component {
     render() {
         return (
-            <div>
-                <Navbar/>
-                <div className="container-fluid body-content">
-                    <Router>
+            <Router>
+                <div>
+                    <Navbar/>
+                    <div className="container-fluid body-content">
                         <div>
                             <Route exact path="/" component={Home}/>
                             <Route path="/map" component={Map}/>
                         </div>
-                    </Router>
 
-                    <hr/>
-                    <Footer/>
+                        <hr/>
+                        <Footer/>
+                    </div>
                 </div>
-            </div>
+            </Router>
         );
     }
 }
