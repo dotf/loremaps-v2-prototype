@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Navbar from './Navbar';
+import Navigation from './Navigation';
 import Footer from './Footer';
 import Home from './Home';
 import Map from './Map';
@@ -10,7 +10,7 @@ class App extends Component {
         return (
             <Router>
                 <div>
-                    <Navbar/>
+                    <Navigation/>
                     <div className="container-fluid body-content">
                         <div>
                             <Route exact path="/" component={Home}/>
