@@ -32,9 +32,15 @@ class FantasyMap {
 
         const rc = new L.RasterCoords(map, [this.options.image.width, this.options.image.height]);
         rc.setMaxBounds();
+        const southWest = rc.unproject([0, rc.height]);
+        const northEast = rc.unproject([rc.width, 0]);
+        const bounds = new L.LatLngBounds(southWest, northEast);
+
+        map.fitBounds(bounds);
         // get the bounds
         L.tileLayer(this.options.image.TilesUrl + '/{z}/{x}/{y}.png', {
-            noWrap: true
+            noWrap: true,
+            bounds: bounds
         }).addTo(map);
 
         map.setView(rc.unproject([0, 0]), 4);
