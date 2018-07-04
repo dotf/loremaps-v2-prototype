@@ -48,6 +48,51 @@ class FantasyMap {
             bounds: bounds
         }).addTo(map);
 
+        // this is used for adding overlays
+        const layerControl = L.control.layers(null, null, { position: 'bottomright' }).addTo(map);
+
+        // set position of zoom control
+        const zoomControl = new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
+        const poiLayers = L.layerGroup().addTo(map);
+
+        const geojsonOpts = {
+
+            // correctly map the geojson coordinates on the image
+            coordsToLatLng: function (coords) {
+                return rc.unproject(coords);
+            },
+
+            pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, {
+                    opacity: 0.7,
+                    title: feature.properties.name
+                })
+            },
+
+            onEachFeature: function onEachFeature(feature, layer) {
+                layer.on({
+                    click: function (e) {
+                        // TODO: try harder here
+                    }
+                });
+            }
+
+        };
+
+        if (options.data) {
+            options.data.forEach(d => {
+                fetch(`/data/${options.id}/${d}.json`)
+                    .then(res => res.json())
+                    .then(data => {
+                        const geoLG = L.geoJson(data, geojsonOpts);
+
+                        poiLayers.addLayer(geoLG);
+
+                        layerControl.addOverlay(geoLG, d);
+                    });
+            });
+        }
+
         map.setView(rc.unproject(this.options.unproject.coords), this.options.unproject.level);
         return map;
     }

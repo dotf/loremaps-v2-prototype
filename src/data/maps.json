@@ -8,7 +8,17 @@
     "unproject": {
       "coords": [0, 0],
       "level": 4
-    }
+    },
+    "data": [
+      "Capitals",
+      "Cities",
+      "Fortresses",
+      "PortCapitals",
+      "Ports",
+      "Ruins",
+      "Sites",
+      "Temples"
+    ]
   },
   {
     "id": "2",
@@ -19,6 +29,13 @@
     "unproject": {
       "coords": [900, 2400],
       "level": 4
-    }
+    },
+    "data": [
+      "Castles",
+      "Cities",
+      "Others",
+      "Ruins",
+      "Towns"
+    ]
   }
 ]

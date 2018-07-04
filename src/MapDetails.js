@@ -14,6 +14,8 @@ class MapDetails extends Component {
     componentDidMount() {
         const map = maps.find(x => x.id === this.props.match.params.id);
         this.init(map);
+        fetch('/data/1/Cities.json')
+            .then(res => console.log(res.json()));
     }
 
     componentDidUpdate(prevProps) {
@@ -30,10 +32,12 @@ class MapDetails extends Component {
             this.state.map.remove();
         }
         const options = {
+            id: map.id,
             map: {
                 minZoom: 0,
                 maxZoom: 6
             },
+            data: map.data,
 
             unproject: map.unproject,
 
