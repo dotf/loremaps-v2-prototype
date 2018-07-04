@@ -3,7 +3,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import Home from './Home';
-import Map from './Map';
+import MapDetails from './MapDetails';
+import './MapDetails.css';
 
 class App extends Component {
     render() {
@@ -14,7 +15,7 @@ class App extends Component {
                     <div className="container-fluid body-content">
                         <div>
                             <Route exact path="/" component={Home}/>
-                            <Route path="/map" component={Map}/>
+                            <Route path="/map" component={MapDetails}/>
                         </div>
 
                         <hr/>
