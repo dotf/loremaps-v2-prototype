@@ -27,6 +27,7 @@ class Home extends Component {
                         <p>LoreMaps is an attempt to help organize information on fantasy maps. With LoreMaps
                             you easily
                             complete the following activities on the fantasy world you are interested in
+                        </p>
                             <ul>
                                 <li>Search a POI by name</li>
                                 <li>Find information about a POI</li>
@@ -36,7 +37,6 @@ class Home extends Component {
                                 <li>Export portion of the map to jpeg</li>
                                 <li>More coming soon...</li>
                             </ul>
-                        </p>
                         <p>The project is still in early alpha release, so we would really appreciate any
                             feedback you can
                             send either issues or improvement suggestions. Please send your feedback to <a
