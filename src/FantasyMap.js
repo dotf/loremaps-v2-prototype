@@ -4,27 +4,7 @@ L.RasterCoords = RasterCoords;
 
 class FantasyMap {
     constructor() {
-        this.options = {
-
-            map: {
-                minZoom: 0,
-                maxZoom: 5
-            },
-
-            unproject: {
-              coords: [0, 0],
-              level: 4
-            },
-
-            image: {
-                width: 4763,
-                height: 3185,
-                TilesUrl: '@Url.Content("~/images/maps/FaerunTiles")',
-                meterPerPixel: 1287.473,
-                attribution: ''
-            }
-
-        };
+        this.options = {};
     }
 
     initialize(options) {
@@ -43,7 +23,7 @@ class FantasyMap {
 
         map.fitBounds(bounds);
         // get the bounds
-        L.tileLayer(this.options.image.TilesUrl + '/{z}/{x}/{y}.png', {
+        L.tileLayer(this.options.image.tilesUrl + '/{z}/{x}/{y}.png', {
             noWrap: true,
             bounds: bounds
         }).addTo(map);
@@ -93,7 +73,7 @@ class FantasyMap {
             });
         }
 
-        map.setView(rc.unproject(this.options.unproject.coords), this.options.unproject.level);
+        map.setView(rc.unproject(this.options.map.unproject.coords), this.options.map.unproject.level);
         return map;
     }
 }
