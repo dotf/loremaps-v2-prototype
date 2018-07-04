@@ -23,6 +23,10 @@ class Navigation extends Component {
                             <NavItem eventKey={2}>Faerun
                             </NavItem>
                         </LinkContainer>
+                        <LinkContainer to="/map/3">
+                            <NavItem eventKey={3}>WFI
+                            </NavItem>
+                        </LinkContainer>
                     </Nav>
                     <Nav pullRight>
                         <NavItem eventKey={1} href="#">

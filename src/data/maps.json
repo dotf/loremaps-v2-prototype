@@ -51,5 +51,23 @@
       "Ruins",
       "Towns"
     ]
+  },
+  {
+    "id": "3",
+    "name": "WFI",
+    "image": {
+      "tilesUrl": "//dotf.github.io/loremaps-wfi-tiles",
+      "width": 4000,
+      "height": 3000,
+      "meterPerPixel": 2266.681
+    },
+    "map": {
+      "minZoom": 0,
+      "maxZoom": 6,
+      "unproject": {
+        "coords": [900, 1000],
+        "level": 3
+      }
+    }
   }
 ]
