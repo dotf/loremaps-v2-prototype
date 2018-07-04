@@ -1,13 +1,34 @@
 import React, {Component} from 'react';
 import FantasyMap from './FantasyMap';
+import maps from './data/maps';
 
 class MapDetails extends Component {
 
-    componentDidMount() {
-        this.init();
+    constructor(props) {
+        super(props);
+        this.state = {
+            map: null
+        };
     }
 
-    init() {
+    componentDidMount() {
+        const map = maps.find(x => x.id === this.props.match.params.id);
+        this.init(map);
+    }
+
+    componentDidUpdate(prevProps) {
+        const oldId = prevProps.match.params.id;
+        const newId = this.props.match.params.id;
+        if (newId !== oldId) {
+            const map = maps.find(x => x.id === this.props.match.params.id);
+            this.init(map);
+        }
+    }
+
+    init(map) {
+        if (this.state.map) {
+            this.state.map.remove();
+        }
         const options = {
             map: {
                 minZoom: 0,
@@ -15,16 +36,17 @@ class MapDetails extends Component {
             },
 
             image: {
-                width: 4763,
-                height: 3185,
-                TilesUrl: '//loremaps.github.io/LoreMaps-Faerun-Tiles/Tiles',
-                meterPerPixel: 1287.473,
-                attribution: 'Map data <a href="http://www.pocketplane.net/">Pocket Plane Group</a>'
+                width: map.width,
+                height: map.height,
+                TilesUrl: map.tilesUrl
             }
         };
 
-        const map = new FantasyMap();
-        map.initialize(options);
+        const fantasyMap = new FantasyMap();
+        const createdMap = fantasyMap.initialize(options);
+        this.setState({
+            map: createdMap
+        });
     }
     render() {
 

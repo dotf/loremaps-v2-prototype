@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "name": "Faerun",
+    "tilesUrl": "//loremaps.github.io/LoreMaps-Faerun-Tiles/Tiles",
+    "width": 4763,
+    "height": 3185
+  },
+  {
+    "id": "2",
+    "name": "GoT",
+    "tilesUrl": "//loremaps.github.io/LoreMaps-GoT-Tiles/Tiles",
+    "width": 4642,
+    "height": 4642
+  }
+]

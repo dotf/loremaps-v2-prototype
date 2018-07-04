@@ -15,11 +15,11 @@ class Navigation extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <LinkContainer to="/map">
+                        <LinkContainer to="/map/2">
                             <NavItem eventKey={1}>Game Of Thrones
                             </NavItem>
                         </LinkContainer>
-                        <LinkContainer to="/map">
+                        <LinkContainer to="/map/1">
                             <NavItem eventKey={2}>Faerun
                             </NavItem>
                         </LinkContainer>

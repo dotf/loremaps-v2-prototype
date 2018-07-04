@@ -46,12 +46,12 @@ class Home extends Component {
 
                 <div className="row">
                     <div className="col-md-6 portfolio-item">
-                        <Link to="/map">
+                        <Link to="/map/2">
                             <img className="img-responsive" src={gotImage}
                                  alt="Game of Thrones map"></img>
                         </Link>
                         <h3>
-                            <Link to="/map">Game Of Thrones</Link>
+                            <Link to="/map/2">Game Of Thrones</Link>
                         </h3>
                         <p>Explore the fantasy world of George R. R. Martin's fantasy series <i>Song of Ice and
                             Fire</i>.
@@ -59,11 +59,11 @@ class Home extends Component {
                     </div>
 
                     <div className="col-md-6 portfolio-item">
-                        <Link to="/map">
+                        <Link to="/map/1">
                             <img className="img-responsive" src={faerunImage} alt="Faerun Map"></img>
                         </Link>
                         <h3>
-                            <Link to="/map">Faerun</Link>
+                            <Link to="/map/1">Faerun</Link>
                         </h3>
                         <p>Explore the primary setting of the <i>Dungeons & Dragons</i> world of <i>Forgotten
                             Realms</i>.
