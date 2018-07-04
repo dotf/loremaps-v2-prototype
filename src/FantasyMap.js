@@ -11,6 +11,11 @@ class FantasyMap {
                 maxZoom: 5
             },
 
+            unproject: {
+              coords: [0, 0],
+              level: 4
+            },
+
             image: {
                 width: 4763,
                 height: 3185,
@@ -43,7 +48,7 @@ class FantasyMap {
             bounds: bounds
         }).addTo(map);
 
-        map.setView(rc.unproject([0, 0]), 4);
+        map.setView(rc.unproject(this.options.unproject.coords), this.options.unproject.level);
         return map;
     }
 }

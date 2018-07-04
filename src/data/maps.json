@@ -4,13 +4,21 @@
     "name": "Faerun",
     "tilesUrl": "//loremaps.github.io/LoreMaps-Faerun-Tiles/Tiles",
     "width": 4763,
-    "height": 3185
+    "height": 3185,
+    "unproject": {
+      "coords": [0, 0],
+      "level": 4
+    }
   },
   {
     "id": "2",
     "name": "GoT",
     "tilesUrl": "//loremaps.github.io/LoreMaps-GoT-Tiles/Tiles",
     "width": 4642,
-    "height": 4642
+    "height": 4642,
+    "unproject": {
+      "coords": [900, 2400],
+      "level": 4
+    }
   }
 ]

@@ -35,6 +35,8 @@ class MapDetails extends Component {
                 maxZoom: 6
             },
 
+            unproject: map.unproject,
+
             image: {
                 width: map.width,
                 height: map.height,
